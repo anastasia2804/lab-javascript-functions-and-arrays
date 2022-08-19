@@ -36,7 +36,7 @@ const numbers = [6, 12, 1, 18, 13, 16, 2, 1, 8, 10];
 function sumNumbers(newArray) {
   
   let sum = 0
-  for (i=0; i<newArray.length; i++){
+  for (let i=0; i<newArray.length; i++){
     sum += newArray[i]
   }
   return sum
@@ -62,7 +62,7 @@ function averageNumbers(myArray) {
   let average = 0
   let numberOfElements = myArray.length
 
-  for (i=0; i<numberOfElements; i++){
+  for (let i=0; i<numberOfElements; i++){
     sum += myArray[i]
     average = sum/numberOfElements
   }
@@ -116,7 +116,7 @@ function uniquifyArray(myArray) {
 
   let uniqueWordsArray = [];
 
-  for(i=0; i<myArray.length; i++){
+  for(let i=0; i<myArray.length; i++){
 
    let index = uniqueWordsArray.indexOf(myArray[i])
    
@@ -133,15 +133,20 @@ function uniquifyArray(myArray) {
 const wordsFind = ['machine', 'subset', 'trouble', 'starting', 'matter', 'eating', 'truth', 'disobedience'];
 
 function doesWordExist(myArray, wordToSearch) {
-  for (i=0; i<myArray.length; i++){
-    if(word) {
+  if (myArray.length == 0){
+    return null
+  }
+  
+  for (let i=0; i<myArray.length; i++){
+    if(wordToSearch == myArray[i]) {
       return true
     } else {
-      return false
+       return false
     }
   }
-  return word
+  return
 }
+
 
 
 
@@ -160,7 +165,16 @@ const wordsCount = [
   'matter'
 ];
 
-function howManyTimes() {}
+function howManyTimes(myArray, wordToSearch) {
+  let count = 0;
+  
+  for (let i=0; i<myArray.length; i++){
+    if (wordToSearch == myArray[i]){
+      count++
+    }
+  }
+  return count
+}
 
 
 
