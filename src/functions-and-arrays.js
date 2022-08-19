@@ -136,15 +136,14 @@ function doesWordExist(myArray, wordToSearch) {
   if (myArray.length == 0){
     return null
   }
-  
   for (let i=0; i<myArray.length; i++){
-    if(wordToSearch == myArray[i]) {
+    if (myArray[i]==wordToSearch){
       return true
-    } else {
-       return false
-    }
+    } 
   }
-  return
+    return false
+
+    // return myArray.includes(wordToSearch);
 }
 
 
